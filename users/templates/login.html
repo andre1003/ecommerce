@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %}
+{% load bootstrap5 %}
+
+
+{% block title %} Login {% endblock title %}
+
+
+{% block body %}
+    <h1> User Login </h1>
+    
+    <form method="post">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+
+        <div class="row">
+            <div class="col d-flex align-right">
+                <button type="submit" class="btn btn-primary"> Login </button>
+            </div>
+        </div>
+    </form>
+{% endblock body %}
